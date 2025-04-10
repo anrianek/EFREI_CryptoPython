@@ -20,7 +20,7 @@ def get_key():
 
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
-    valeur_bytes = valeur.encode()  # Conversion str -> bytes
+    valeur_bytes = valeur.encode()  # Conversion str -> byte
     token = f.encrypt(valeur_bytes)  # Encrypt la valeur
     return f"Valeur encryptée : {token.decode()}"  # Retourne le token en str
 
